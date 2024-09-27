@@ -141,9 +141,9 @@ public class PostController {
 			HttpServletResponse response
 			) throws IOException {
 		InputStream inputStream = this.fileService.getSource(path, imageName);
-		System.out.println(inputStream);
+		
 		response.setContentType(MediaType.IMAGE_JPEG_VALUE);
-		System.out.print("Hello");
+		
 		StreamUtils.copy(inputStream, response.getOutputStream());
 		}
 }
